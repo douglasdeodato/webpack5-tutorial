@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/douglasdeodato/webpack5-tutorial#readme",
   "devDependencies": {
+    "file-loader": "^6.2.0",
     "webpack": "^5.9.0",
     "webpack-cli": "^4.2.0"
   }
