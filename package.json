@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/douglasdeodato/webpack5-tutorial/issues"
   },
-  "homepage": "https://github.com/douglasdeodato/webpack5-tutorial#readme"
+  "homepage": "https://github.com/douglasdeodato/webpack5-tutorial#readme",
+  "devDependencies": {
+    "webpack": "^5.9.0",
+    "webpack-cli": "^4.2.0"
+  }
 }
