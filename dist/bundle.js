@@ -10,7 +10,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 (0,_hello_world_js__WEBPACK_IMPORTED_MODULE_0__.default)();
 (0,_add_image_js__WEBPACK_IMPORTED_MODULE_1__.default)();
 
