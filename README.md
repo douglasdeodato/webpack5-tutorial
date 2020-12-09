@@ -18,3 +18,8 @@ make 2 diferent compile files 1 for css another to js
 run in the terminal:
 
 npm install mini-css-extract-plugin --save-dev
+
+
+# browser caching 
+
+files will be created with md5 hash.
