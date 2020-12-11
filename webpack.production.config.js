@@ -1,10 +1,10 @@
 const path = require('path');
-const MiniCssExtractPlugin = require ('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require ('clean-webpack-plugin');
-const HtmlWebpackPlugin = require ('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry:{
+    entry: {
         'hello-world': './src/hello-world.js',
         'hello-world-button': './src/hello-world-button.js',
         'potato': './src/potato.js'
@@ -14,7 +14,7 @@ module.exports = {
         path: path.resolve(__dirname, './dist'),
         publicPath: ''
     },
-    mode:'production',
+    mode: 'production',
 
     module: {
         rules: [
@@ -25,21 +25,21 @@ module.exports = {
                 ]
             },
             {
-                test:/\.css$/,
-                use:[
+                test: /\.css$/,
+                use: [
                     MiniCssExtractPlugin.loader, 'css-loader'
                 ]
             },
             {
-                test:/\.scss$/,
-                use:[
+                test: /\.scss$/,
+                use: [
                     MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'
                 ]
             },
             {
-                test:/\.js$/,
+                test: /\.js$/,
                 exclude: /node_modules/,
-                use:{
+                use: {
                     loader: 'babel-loader',
                     options: {
                         presets: ['@babel/env'],
@@ -48,38 +48,38 @@ module.exports = {
                 }
             },
             {
-            test: /\.hbs$/,
-            use: [
-                'handlebars-loader'
-            ]
-        }
+                test: /\.hbs$/,
+                use: [
+                    'handlebars-loader'
+                ]
+            }
         ]
     },
-    plugins : [
+    plugins: [
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css',
         }),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             filename: 'hello-world.html',
-            chuncks:['hello-world'],
+            chuncks: ['hello-world'],
             title: 'hello world handlebars',
             template: 'src/index.hbs',
-            description : 'some description with hello world and handlebars' 
+            description: 'some description with hello world and handlebars'
         }),
         new HtmlWebpackPlugin({
             filename: 'potato.html',
-            chuncks:['potato'],
+            chuncks: ['potato'],
             title: 'potato',
             template: 'src/index.hbs',
-            description : 'potato' 
+            description: 'potato'
         }),
         new HtmlWebpackPlugin({
             filename: 'hello-world-button.html',
-            chuncks:['hello-world-button'],
+            chuncks: ['hello-world-button'],
             title: 'hello-world-button',
             template: 'src/index.hbs',
-            description : 'hello-world-button  description' 
+            description: 'hello-world-button  description'
         })
     ]
 }
