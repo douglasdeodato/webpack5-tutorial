@@ -49,11 +49,6 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'style[contenthash].css',
         }),
-        new CleanWebpackPlugin({
-            cleanAfterEveryBuildPatterns: [
-                '**/*',
-                path.join(process.cwd(), 'build/**/*')
-            ]
-        }),
+        new CleanWebpackPlugin(),
     ]
 }
