@@ -4,5 +4,5 @@ import PotatoImg from './components/potato-image/potato.js';
 
 const heading = new Heading();
 heading.render();
-const potatoimg = new PotatoImg();
-potato.render();
+const potatoImg = new PotatoImg();
+potatoImg.render();

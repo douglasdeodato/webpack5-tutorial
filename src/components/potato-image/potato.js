@@ -4,9 +4,9 @@ import './potato.scss';
 class PotatoImg {
     render() {
         const img = document.createElement('img');
-        img.src = PotatoImg;
+        img.src = Potato;
         img.alt = 'potato alt';
-        img.classList.add('potato');
+        img.classList.add('potato-img');
 
         const bodyDomElement = document.querySelector('body');
         bodyDomElement.appendChild(img);

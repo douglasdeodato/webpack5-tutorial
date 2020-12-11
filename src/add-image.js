@@ -1,14 +1,14 @@
-import Potato from './potato.jpg';
+// import Potato from './components/potato-image/potato.jpg';
 
-function addImage(){
-    const img = document.createElement('img');
-    img.alt = 'Potato';
-    img.width = 300;
-    img.src = Potato;
-    const body = document.querySelector('body');
-    body.appendChild(img);
-}
+// function addImage(){
+//     const img = document.createElement('img');
+//     img.alt = 'Potato';
+//     img.width = 300;
+//     img.src = Potato;
+//     const body = document.querySelector('body');
+//     body.appendChild(img);
+// }
 
 
 
-export default addImage;
+// export default addImage;
