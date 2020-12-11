@@ -67,4 +67,6 @@ https://webpack.js.org/plugins/
 
 # mode in webpack
 
+https://webpack.js.org/configuration/mode/
+
 we are testing development mode if catchs a error.
