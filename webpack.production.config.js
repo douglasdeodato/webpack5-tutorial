@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require ('html-webpack-plugin');
 module.exports = {
     entry:{
         'hello-world': './src/hello-world.js',
+        'hello-world-button': './src/hello-world-button.js',
         'potato': './src/potato.js'
     },
     output: {
