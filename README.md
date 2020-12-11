@@ -31,3 +31,7 @@ if you change tha file, the md5 hash will change too.
 this plugin will remove the other md5 files from dist. created after we changed any file
 
 npm install clean-webpack-plugin --save-dev
+
+# lets configure webpack to clean this folder as well
+
+'**/*', this remove all files

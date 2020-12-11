@@ -11,7 +11,7 @@ class HelloWorldButton {
         const body = document.querySelector('body');
         button.onclick = function (){
             const p = document.createElement('p');
-            p.innerHTML = 'Hello world';
+            p.innerHTML = 'Hello world text';
             p.classList.add('hello-world-text');
             body.appendChild(p);
         }
