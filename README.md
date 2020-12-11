@@ -34,4 +34,11 @@ npm install clean-webpack-plugin --save-dev
 
 # lets configure webpack to clean this folder as well
 
-'cleaning dist folder before generating new bundles'   (keep the folder nice and clean)
+'cleaning dist folder before generating new bundles'   (keep the folder nice and)
+
+
+# html-webpack-plugin
+
+npm install html-webpack-plugin --save-dev
+
+now webpack creates our html file in dist folder, with all the new and updated generated css and js
