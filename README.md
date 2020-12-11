@@ -34,4 +34,4 @@ npm install clean-webpack-plugin --save-dev
 
 # lets configure webpack to clean this folder as well
 
-'**/*', this remove all files
+'cleaning dist folder before generating new bundles'
