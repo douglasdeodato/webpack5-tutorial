@@ -43,7 +43,13 @@ module.exports = {
                         plugins: ['@babel/plugin-proposal-class-properties']
                     }
                 }
-            }
+            },
+            {
+            test: /\.hbs$/,
+            use: [
+                'handlebars-loader'
+            ]
+        }
         ]
     },
     plugins : [
@@ -53,10 +59,9 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: 'hello world',
-            meta: {
-                description : 'some description'
-            }
+            title: 'hello world handlebars',
+            template: 'src/components/index.hbs',
+            description : 'some description with handlebars' 
         })
     ]
 }

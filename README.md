@@ -46,3 +46,13 @@ now webpack creates our html file in dist folder, with all the new and updated g
 # Customizing Generated HTML Files
 
 https://github.com/jantimon/html-webpack-plugin
+
+
+# Integration with Handlebars
+
+webpack created our html using our own template, in that case with handlebars. 
+
+npm install handlebars-loader --save-dev
+npm install handlebars --save
+
+https://github.com/jantimon/html-webpack-plugin/blob/master/docs/template-option.md
