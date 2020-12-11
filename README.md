@@ -56,3 +56,8 @@ npm install handlebars-loader --save-dev
 npm install handlebars --save
 
 https://github.com/jantimon/html-webpack-plugin/blob/master/docs/template-option.md
+
+
+# webpack plugins
+
+https://webpack.js.org/plugins/
