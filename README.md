@@ -41,4 +41,6 @@ npm install clean-webpack-plugin --save-dev
 
 npm install html-webpack-plugin --save-dev
 
-now webpack creates our html file in dist folder, with all the new and updated generated css and js
+now webpack creates our html file in dist folder, with all the new and updated generated css and js , index.html from main project has been deleted. one it is created inside dist folder.
+
+
