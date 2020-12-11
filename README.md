@@ -74,3 +74,11 @@ we are testing development mode if catchs a error.
 # Managing Webpack Config for Production and  Development Use Cases
 
 we creating 2 diferent configurations prod and dev for webpack
+
+
+# webpack dev server
+
+npm install webpack-dev-server --save-dev
+
+
+# Code Splitting in Webpack: Multiple JS and CSS Bundles
