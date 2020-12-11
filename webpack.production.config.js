@@ -61,9 +61,25 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
+            filename: 'hello-world.html',
+            chuncks:['hello-world'],
             title: 'hello world handlebars',
             template: 'src/components/index.hbs',
-            description : 'some description with handlebars' 
+            description : 'some description with hello world and handlebars' 
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'potato.html',
+            chuncks:['potato'],
+            title: 'potato',
+            template: 'src/components/index.hbs',
+            description : 'potato' 
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'hello-world-button.html',
+            chuncks:['hello-world-button'],
+            title: 'hello-world-button',
+            template: 'src/components/index.hbs',
+            description : 'hello-world-button  description' 
         })
     ]
 }

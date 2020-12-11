@@ -81,4 +81,6 @@ we creating 2 diferent configurations prod and dev for webpack
 npm install webpack-dev-server --save-dev
 
 
-# Code Splitting in Webpack: Multiple JS and CSS Bundles
+# Code Splitting in Webpack: Multiple JS and CSS Bundles .
+
+# Generate Multiple HTML Files
