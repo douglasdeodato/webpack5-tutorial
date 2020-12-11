@@ -61,3 +61,10 @@ https://github.com/jantimon/html-webpack-plugin/blob/master/docs/template-option
 # webpack plugins
 
 https://webpack.js.org/plugins/
+
+
+# Production vs Development Builds
+
+# mode in webpack
+
+we are testing development mode if catchs a error.
