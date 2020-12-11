@@ -70,3 +70,7 @@ https://webpack.js.org/plugins/
 https://webpack.js.org/configuration/mode/
 
 we are testing development mode if catchs a error.
+
+# Managing Webpack Config for Production and  Development Use Cases
+
+we creating 2 diferent configurations prod and dev for webpack

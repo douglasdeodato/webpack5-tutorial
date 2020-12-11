@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === 'production'){
 }
 
 
-helloWorldButton.methodThatDoesNotExist();
+//helloWorldButton.methodThatDoesNotExist();
 
 HelloWorld();
 addImage();
