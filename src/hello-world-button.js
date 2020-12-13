@@ -1,6 +1,6 @@
 import Heading from './components/heading/heading.js';
 import HelloWorldButton from './components/hello-world-button/hello-world-button.js';
-import _ from 'lodash';
+import React from 'react';
 
 
 if (process.env.NODE_ENV === 'production'){
@@ -10,6 +10,6 @@ if (process.env.NODE_ENV === 'production'){
 }
 
 const heading = new Heading();
-heading.render(_.upperFirst('hello world button'));
+heading.render('hello world button');
 const helloWorldButton = new HelloWorldButton();
 helloWorldButton.render();

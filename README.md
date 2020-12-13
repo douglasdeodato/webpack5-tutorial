@@ -89,3 +89,9 @@ npm install webpack-dev-server --save-dev
 # Extracting Common Dependencies While Code Splitting
 
 npm install lodash --save
+
+# Setting Custom Options for Code Splitting
+
+using react
+
+npm install react --save
