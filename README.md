@@ -84,3 +84,8 @@ npm install webpack-dev-server --save-dev
 # Code Splitting in Webpack: Multiple JS and CSS Bundles .
 
 # Generate Multiple HTML Files
+
+
+# Extracting Common Dependencies While Code Splitting
+
+npm install lodash --save
