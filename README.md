@@ -95,3 +95,6 @@ npm install lodash --save
 using react
 
 npm install react --save
+
+
+# Setup Development Environment For Multiple Page Application

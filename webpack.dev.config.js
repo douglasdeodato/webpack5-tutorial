@@ -3,9 +3,12 @@ const { CleanWebpackPlugin } = require ('clean-webpack-plugin');
 const HtmlWebpackPlugin = require ('html-webpack-plugin');
 
 module.exports = {
-    entry:'./src/potato.js',
+    entry: {
+        'hello-world-button': './src/hello-world-button.js',
+        'potato': './src/potato.js'
+    },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, './dist'),
         publicPath: ''
     },
@@ -59,9 +62,25 @@ module.exports = {
     plugins : [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
+            filename: 'hello-world.html',
+            chunks: ['hello-world'],
+            title: 'hello world handlebars',
+            template: 'src/index.hbs',
+            description: 'some description with hello world and handlebars'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'potato',
+            chunks:['potato'],
+            title: 'potato handlebars',
+            template: 'src/index.hbs',
+            description : 'some description with handlebars' 
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'hello world button',
+            chunks:['hello-world-button'],
             title: 'hello world handlebars',
             template: 'src/index.hbs',
             description : 'some description with handlebars' 
-        })
+        }) 
     ]
 }
