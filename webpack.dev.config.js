@@ -3,7 +3,7 @@ const { CleanWebpackPlugin } = require ('clean-webpack-plugin');
 const HtmlWebpackPlugin = require ('html-webpack-plugin');
 
 module.exports = {
-    entry:'./src/index.js',
+    entry:'./src/potato.js',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, './dist'),
@@ -60,7 +60,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: 'hello world handlebars',
-            template: 'src/components/index.hbs',
+            template: 'src/index.hbs',
             description : 'some description with handlebars' 
         })
     ]
