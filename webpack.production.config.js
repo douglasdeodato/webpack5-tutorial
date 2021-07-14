@@ -1,52 +1,59 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin=require('mini-css-extract-plugin');
+const {CleanWebpackPlugin} =require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require ('html-webpack-plugin');
+
 
 module.exports = {
     entry: {
+        //chuncks names
         'hello-world': './src/hello-world.js',
-        'hello-world-button': './src/hello-world-button.js',
-        'potato': './src/potato.js'
+        'kiwi': './src/kiwi.js'
     },
     output: {
         filename: '[name].[contenthash].js',
-        path: path.resolve(__dirname, './dist'),
-        publicPath: ''
+        path:path.resolve(__dirname, './dist'),
+        publicPath:''
     },
     mode: 'production',
     optimization: {
         splitChunks: {
             chunks: "all",
-            minSize: 10000,
+            minSize: 3000,
             automaticNameDelimiter: '_'
         }
     },
-
     module: {
         rules: [
             {
                 test: /\.(png|jpg)$/,
-                use: [
-                    'file-loader'
-                ]
+                type:'asset',
+                parser: {
+                    dataUrlCondition: {
+                        maxSize: 3 * 1024 // 3 kilobytes
+                    }   
+                }
             },
             {
-                test: /\.css$/,
-                use: [
+                test: /\.txt/,
+                type: 'asset/source'
+            },
+            {
+                test:/\.css$/,
+                use:[
                     MiniCssExtractPlugin.loader, 'css-loader'
                 ]
             },
             {
-                test: /\.scss$/,
-                use: [
+                test:/\.scss$/,
+                use:[
                     MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'
                 ]
             },
             {
-                test: /\.js$/,
+                test:/\.js$/,
                 exclude: /node_modules/,
-                use: {
+                use:{
                     loader: 'babel-loader',
                     options: {
                         presets: ['@babel/env'],
@@ -60,33 +67,34 @@ module.exports = {
                     'handlebars-loader'
                 ]
             }
+
         ]
     },
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: '[name].[contenthash].css',
-        }),
-        new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            filename: 'hello-world.html',
-            chunks: ['hello-world'],
-            title: 'hello world handlebars',
-            template: 'src/index.hbs',
-            description: 'some description with hello world and handlebars'
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'potato.html',
-            chunks: ['potato'],
-            title: 'potato',
-            template: 'src/index.hbs',
-            description: 'potato'
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'hello-world-button.html',
-            chunks: ['hello-world-button'],
-            title: 'hello-world-button',
-            template: 'src/index.hbs',
-            description: 'hello-world-button  description'
-        })
+    plugins:[
+       new MiniCssExtractPlugin({
+        filename: '[name].[contenthash].css',
+    }),
+    new CleanWebpackPlugin({
+       cleanOnceBeforeBuildPatterns: [
+           '**/*',
+           path.join(process.cwd(), 'build/**/*'),
+       ],
+    }),
+    new HtmlWebpackPlugin({
+        filename:'hello-world.html',
+        chunks: ['hello-world'],
+        title: 'hello world',
+        template: 'src/page-template.hbs',
+        description: 'hello world',
+        minify: false
+    }),
+    new HtmlWebpackPlugin({
+        filename:'kiwi.html',
+        chunks: ['kiwi'],
+        title: 'kiwi title',
+        template: 'src/page-template.hbs',
+        description: 'kiwi',
+        minify: false
+    })
     ]
 }
