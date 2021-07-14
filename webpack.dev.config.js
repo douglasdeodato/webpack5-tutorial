@@ -4,10 +4,14 @@ const HtmlWebpackPlugin = require ('html-webpack-plugin');
 
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        //chuncks names
+        'hello-world': './src/hello-world.js',
+        'kiwi': './src/kiwi.js'
+    },
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, './dist'),
+        filename: '[name].bundle.js',
+        path:path.resolve(__dirname, './dist'),
         publicPath:''
     },
     mode: 'development',
@@ -65,16 +69,22 @@ module.exports = {
         ]
     },
     plugins:[
-    new CleanWebpackPlugin({
-       cleanOnceBeforeBuildPatterns: [
-           '**/*',
-           path.join(process.cwd(), 'build/**/*'),
-       ],
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+        filename:'hello-world.html',
+        chunks: ['hello-world'],
+        title: 'hello world',
+        template: 'src/page-template.hbs',
+        description: 'hello world',
+        minify: false
     }),
     new HtmlWebpackPlugin({
-        title: 'hello world handlebars',
-        template: 'src/index.hbs',
-        description: 'some desc'
+        filename:'kiwi.html',
+        chunks: ['kiwi'],
+        title: 'kiwi title',
+        template: 'src/page-template.hbs',
+        description: 'kiwi',
+        minify: false
     })
     ]
 }
